@@ -40,7 +40,7 @@ app.get('/',(req,res)=>{
 
 const io = require('socket.io')(Server , {
     cors: {
-      origin: [ 'http://localhost:3000'] ,
+      origin: [ 'http://localhost:3000','https://chatmesss.onrender.com'] ,
       methods: ["GET", "POST"],
       credentials: true
   },
