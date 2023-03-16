@@ -28,7 +28,7 @@ router.post('/getConversation', async (req, res) => {
      } catch(err) {
           res.status(400).json(err)
      }          
-     })
+})
 
 router.post('/addConversation', async (req, res) => {
      const { receiverId, text, senderId} = req.body
