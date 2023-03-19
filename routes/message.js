@@ -52,10 +52,13 @@ router.post('/addConversation', async (req, res) => {
                     message: [messageObj]
                })
                newMsg.save()
-               .then( res.status(200).send("Does not exist") )
+               .then(res.status(200).send("not exists"))
+               
+                
                
                
           }
+          
           else {
                if(data !== null && data2 === null) {
                     msg.findOneAndUpdate({ receiverId:receiverId, senderId:senderId }, { $push: { message: messageObj } })
@@ -80,6 +83,7 @@ router.post('/addConversation', async (req, res) => {
           } catch(err) {
                res.status(400).json(err)
           }
+          
 })
 
 router.post('/delConversation', async (req, res) => {
